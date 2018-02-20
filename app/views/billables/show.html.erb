@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item number:</strong>
+  <%= @billable.item_number %>
+</p>
+
+<p>
+  <strong>Visit type:</strong>
+  <%= @billable.visit_type %>
+</p>
+
+<p>
+  <strong>Min visit:</strong>
+  <%= @billable.min_visit %>
+</p>
+
+<p>
+  <strong>Max visit:</strong>
+  <%= @billable.max_visit %>
+</p>
+
+<p>
+  <strong>Core fee:</strong>
+  <%= @billable.core_fee %>
+</p>
+
+<%= link_to 'Edit', edit_billable_path(@billable) %> |
+<%= link_to 'Back', billables_path %>

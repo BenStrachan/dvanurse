@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-6">
+    <h1>Pending Claim</h1>
+  </div>
+  <div class="col-md-6 col-sm-6 col-6 text-right">
+      <a class="btn btn-outline-primary" href="<%= edit_claim_path(@claim) %>">Edit</a>
+  </div>
+</div>
+<hr>
+<a class="btn btn-outline-primary" href="#">Approve Claim</a>
+<a class="btn btn-outline-primary" href="#">Create Invoice OH</a>
+<hr>
+<p>
+  <strong>Client Full Name</strong>
+  <%= @claim.client_full_name %>
+</p>
+<p>
+  <strong>Cnc hours:</strong>
+  <%= @claim.cnc_hours %>
+</p>
+
+<p>
+  <strong>Cnc visits:</strong>
+  <%= @claim.cnc_visits %>
+</p>
+
+<p>
+  <strong>En hours:</strong>
+  <%= @claim.en_hours %>
+</p>
+
+<p>
+  <strong>En visits:</strong>
+  <%= @claim.en_visits %>
+</p>
+
+<p>
+  <strong>Nss hours:</strong>
+  <%= @claim.nss_hours %>
+</p>
+
+<p>
+  <strong>Nss visits:</strong>
+  <%= @claim.nss_visits %>
+</p>
+
+<p>
+  <strong>Rn hours:</strong>
+  <%= @claim.rn_hours %>
+</p>
+
+<p>
+  <strong>Rn visits:</strong>
+  <%= @claim.rn_visits %>
+</p>
+
+<p>
+  <strong>Claim amount:</strong>
+  <%= @claim.claim_amount %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <%= @claim.items %>
+</p>
+
+<%= link_to 'Edit', edit_claim_path(@claim) %> |
+<%= link_to 'Back', claims_path %>

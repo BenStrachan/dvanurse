@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  item_number: MyString
+  visit_type: MyString
+  min_visit: 1
+  max_visit: 1
+  core_fee: 1.5
+
+two:
+  item_number: MyString
+  visit_type: MyString
+  min_visit: 1
+  max_visit: 1
+  core_fee: 1.5

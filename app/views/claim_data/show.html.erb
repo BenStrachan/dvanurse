@@ -1,0 +1,18 @@
+<h4>Claim Data</h4>
+<p>
+  <strong>Provider full name:</strong>
+  <%= @claim_datum.provider_full_name %>
+</p>
+
+<p>
+  <strong>Provider:</strong>
+  <%= @claim_datum.provider_id %>
+</p>
+
+<p>
+  <strong>Date of service:</strong>
+  <%= @claim_datum.date_of_service %>
+</p>
+
+<%= link_to 'Edit', edit_claim_datum_path(@claim_datum) %> |
+<%= link_to 'Back', claim_data_path %>

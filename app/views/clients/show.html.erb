@@ -1,0 +1,97 @@
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-6">
+    <h1>Clients</h1>
+  </div>
+  <div class="col-md-6 col-sm-6 col-6 text-right">
+      <a class="btn btn-outline-primary" href="<%= edit_client_path(@client) %>">Edit</a>
+  </div>
+</div>
+<hr>
+<p>
+  <strong>First name:</strong>
+  <%= @client.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @client.last_name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @client.dob %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @client.gender %>
+</p>
+
+<p>
+  <strong>Dva number:</strong>
+  <%= @client.dva_number %>
+</p>
+
+<p class="green-text">
+  <strong>Accepted Disability:</strong>
+  <%= @client.accepted_disability %>
+</p>
+
+<p class="green-text">
+  <strong>Accepted Disability Text:</strong>
+  <%= @client.accepted_disability_text %>
+</p>
+
+<p class="green-text">
+  <strong>Admission date:</strong>
+  <%= @client.admission_date %>
+</p>
+<p class="green-text">
+  <strong>Discharge date:</strong>
+  <%= @client.discharge_date %>
+</p>
+<p class="green-text">
+  <strong>Palliative Status:</strong>
+  <%= @client.palliative_status %>
+</p>
+<hr>
+<h4>Referral</h4>
+<br>
+<p>
+  <strong>Refer Doctor First Name:</strong>
+  <%= @client.refer_doctor_first_name %>
+</p>
+<p>
+  <strong>Refer Doctor Last Name:</strong>
+  <%= @client.refer_doctor_last_name %>
+</p>
+<p>
+  <strong>Refer doctor provider number:</strong>
+  <%= @client.refer_doctor_provider_number %>
+</p>
+<p>
+  <strong>Referral date:</strong>
+  <%= @client.refer_date %>
+</p>
+<p class="green-text">
+  <strong>Referral type:</strong>
+  <%= @client.refer_type %>
+</p>
+<hr>
+<h4>Break in care</h4>
+<br>
+<p class="green-text">
+  <strong>Break in episode of care:</strong>
+  <%= @client.break_in_episode_of_care %>
+</p>
+<p class="green-text">
+  <strong>Start in episode of care:</strong>
+  <%= @client.start_date_break_episode %>
+</p>
+<p class="green-text">
+  <strong>End in episode of care:</strong>
+  <%= @client.end_date_break_episode %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

@@ -1,0 +1,12 @@
+<%= simple_form_for(@item) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :item_number %>
+    <%= f.input :classification,:collection => ['Clinical Care', 'Personal Care', 'Other care'] %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

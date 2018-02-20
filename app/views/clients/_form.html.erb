@@ -1,0 +1,40 @@
+<%= simple_form_for(@client) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <hr>
+    <h4>Client details</h4>
+    <br>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :dob %>
+    <%= f.input :gender,:collection => ['M', 'F'] %>
+    <%= f.input :dva_number %>
+    <%= f.input :accepted_disability,:collection => ['Y', 'N'] %>
+    <%= f.input :accepted_disability_text,:collection => ['Community Nursing', 'N'] %>
+    <%= f.input :admission_date %>
+    <%= f.input :discharge_date %>
+    <%= f.input :palliative_status,:collection => ['NA04', 'NAO5', 'NA06', 'NA07'] %>
+
+    <hr>
+    <h4>Referral</h4>
+    <br>
+    <%= f.input :refer_doctor_first_name %>
+    <%= f.input :refer_doctor_last_name %>
+    <%= f.input :refer_doctor_provider_number %>
+    <%= f.input :refer_date %>
+    <%= f.input :refer_type,:collection => ['S', 'No'] %>
+    <hr>
+    <h4>Break in care</h4>
+    <br>
+    <%= f.input :break_in_episode_of_care,:collection => ['1', '2', '3', '4', '5'] %>
+    <%= f.input :start_date_break_episode %>
+    <%= f.input :end_date_break_episode %>
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

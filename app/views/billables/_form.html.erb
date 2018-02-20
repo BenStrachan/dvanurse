@@ -1,0 +1,14 @@
+<%= simple_form_for(@billable) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :item_number %>
+    <%= f.input :visit_type %>
+    <%= f.input :min_visit %>
+    <%= f.input :max_visit %>
+    <%= f.input :core_fee %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

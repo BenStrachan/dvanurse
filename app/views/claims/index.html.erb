@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-6">
+    <h1>Claims</h1>
+  </div>
+  <div class="col-md-6 col-sm-6 col-6 text-right">
+    <a class="btn btn-outline-primary" href="<%= new_claim_path %>">New</a>
+    <a class="btn btn-outline-success" href="#">Sync</a>
+  </div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Client</th>
+      <th>Claim amount</th>
+      <th>Created at</th>
+      <th></th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @claims.each do |claim| %>
+      <tr>
+        <td><%= claim.client_full_name %></td>
+        <td><%= claim.claim_amount %></td>
+        <td><%= claim.created_at %></td>
+        <td> <a href="#">Approve</a> </td>
+        <td> <a href="#">Invoice</a> </td>
+        <td><%= link_to 'Show', claim %></td>
+        <td><%= link_to 'Edit', edit_claim_path(claim) %></td>
+        <td><%= link_to 'Destroy', claim, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Claim', new_claim_path %>

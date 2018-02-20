@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-6">
+    <h1>Clients</h1>
+  </div>
+  <div class="col-md-6 col-sm-6 col-6 text-right">
+    <a class="btn btn-outline-primary" href="<%= new_client_path %>">New</a>
+    <a class="btn btn-outline-success" href="#">Sync</a>
+  </div>
+</div>
+<p>Import DVA Clients from Owner Health</p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Dob</th>
+      <th>Gender</th>
+      <th>Dva number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.first_name %></td>
+        <td><%= client.last_name %></td>
+        <td><%= client.dob %></td>
+        <td><%= client.gender %></td>
+        <td><%= client.dva_number %></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>

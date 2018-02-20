@@ -1,0 +1,2 @@
+class ClaimDatum < ApplicationRecord
+end
