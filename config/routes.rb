@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'dashboards/index'
+
+  get 'dashboards/setting'
+
   resources :billables
   resources :items
   resources :claims
