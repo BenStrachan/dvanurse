@@ -69,6 +69,6 @@ class ClaimsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_params
-      params.require(:claim).permit(:cnc_hours, :cnc_visits, :en_hours, :en_visits, :nss_hours, :nss_visits, :rn_hours, :rn_visits, :claim_amount, :items, :client_full_name)
+      params.require(:claim).permit(:cnc_hours, :cnc_visits, :en_hours, :en_visits, :nss_hours, :nss_visits, :rn_hours, :rn_visits, :claim_amount, :items, :client_full_name, :status)
     end
 end

@@ -6,8 +6,8 @@
     <div class="col-md-6 col-sm-6 col-6 text-right">
       <a class="btn btn-outline-primary" href="<%= edit_claim_path(@claim) %>">Edit</a>
       <a class="btn btn-outline-primary" href="#">Recalculate</a>
-      <a class="btn btn-outline-primary" href="#">Approve Claim</a>
-      <a class="btn btn-outline-primary" href="#">Create Invoice OH</a>
+      <a class="btn btn-outline-primary" href="#">Approve</a>
+      <a class="btn btn-outline-primary" href="#">Invoice</a>
     </div>
   </div>
   <hr>
@@ -25,10 +25,12 @@
     <%= @claim.claim_amount %>
   </p>
   <p>
-    <strong>Billable items:</strong>
+    <strong>Status:</strong>
+    <%= @claim.status %>
   </p>
   <p>
-    <strong>Service items:</strong>
+    <strong>Billable items:</strong>
+    Billable item 1, Billable item 2, Billable item 3
   </p>
   <table class="table table-striped table-hover">
     <thead>
