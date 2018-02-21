@@ -1,68 +1,120 @@
-<div class="row">
-  <div class="col-md-6 col-sm-6 col-6">
-    <h1>Pending Claim</h1>
-  </div>
-  <div class="col-md-6 col-sm-6 col-6 text-right">
+<div class="border">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-6">
+      <h4>Claim</h4>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6 text-right">
       <a class="btn btn-outline-primary" href="<%= edit_claim_path(@claim) %>">Edit</a>
+      <a class="btn btn-outline-primary" href="#">Recalculate</a>
+      <a class="btn btn-outline-primary" href="#">Approve Claim</a>
+      <a class="btn btn-outline-primary" href="#">Create Invoice OH</a>
+    </div>
   </div>
+  <hr>
+
+  <p>
+    <strong>Date created:</strong>
+    <%= @claim.created_at %>
+  </p>
+  <p>
+    <strong>Client name:</strong>
+    <%= @claim.client_full_name %>
+  </p>
+  <p>
+    <strong>Claim amount:</strong>
+    <%= @claim.claim_amount %>
+  </p>
+  <p>
+    <strong>Billable items:</strong>
+  </p>
+  <p>
+    <strong>Service items:</strong>
+  </p>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Classification</th>
+        <th>Total visits</th>
+        <th>Total hours</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+          <td>CNC</td>
+          <td><%= @claim.cnc_visits %></td>
+          <td><%= @claim.cnc_hours %></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>EN</td>
+          <td><%= @claim.en_visits %></td>
+          <td><%= @claim.en_hours %></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NSS</td>
+          <td><%= @claim.nss_visits %></td>
+          <td><%= @claim.nss_hours %></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RN</td>
+          <td><%= @claim.rn_visits %></td>
+          <td><%= @claim.rn_hours %></td>
+          <td></td>
+        </tr>
+    </tbody>
+  </table>
 </div>
-<hr>
-<a class="btn btn-outline-primary" href="#">Approve Claim</a>
-<a class="btn btn-outline-primary" href="#">Create Invoice OH</a>
-<hr>
-<p>
-  <strong>Client Full Name</strong>
-  <%= @claim.client_full_name %>
-</p>
-<p>
-  <strong>Cnc hours:</strong>
-  <%= @claim.cnc_hours %>
-</p>
 
-<p>
-  <strong>Cnc visits:</strong>
-  <%= @claim.cnc_visits %>
-</p>
+<br>
+<div class="border">
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-6">
+      <h4>Claim data</h4>
+    </div>
+    <div class="col-md-6 col-sm-6 col-6 text-right">
+        <a class="btn btn-outline-primary" href="#">New</a>
+    </div>
+  </div>
+  <br>
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>Claim Data</th>
+        <th>Hours</th>
+        <th>Service items</th>
+        <th></th>
+      </tr>
+    </thead>
 
-<p>
-  <strong>En hours:</strong>
-  <%= @claim.en_hours %>
-</p>
-
-<p>
-  <strong>En visits:</strong>
-  <%= @claim.en_visits %>
-</p>
-
-<p>
-  <strong>Nss hours:</strong>
-  <%= @claim.nss_hours %>
-</p>
-
-<p>
-  <strong>Nss visits:</strong>
-  <%= @claim.nss_visits %>
-</p>
-
-<p>
-  <strong>Rn hours:</strong>
-  <%= @claim.rn_hours %>
-</p>
-
-<p>
-  <strong>Rn visits:</strong>
-  <%= @claim.rn_visits %>
-</p>
-
-<p>
-  <strong>Claim amount:</strong>
-  <%= @claim.claim_amount %>
-</p>
-
-<p>
-  <strong>Items:</strong>
-  <%= @claim.items %>
-</p>
-
-<%= link_to 'Edit', edit_claim_path(@claim) %> |
-<%= link_to 'Back', claims_path %>
+    <tbody>
+        <tr>
+          <td>January 22nd 2018</td>
+          <td><%= @claim.cnc_visits %></td>
+          <td><%= @claim.cnc_hours %></td>
+          <td><a href="#">Show</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>January 24nd 2018</td>
+          <td><%= @claim.en_visits %></td>
+          <td><%= @claim.en_hours %></td>
+          <td><a href="#">Show</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>January 27nd 2018</td>
+          <td><%= @claim.nss_visits %></td>
+          <td><%= @claim.nss_hours %></td>
+          <td><a href="#">Show</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+          <td>January 28nd 2018</td>
+          <td><%= @claim.rn_visits %></td>
+          <td><%= @claim.rn_hours %></td>
+          <td><a href="#">Show</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
