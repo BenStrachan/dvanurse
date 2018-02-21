@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-6 col-sm-6 col-6 text-right">
     <a class="btn btn-outline-primary" href="<%= new_claim_path %>">New</a>
-    <a class="btn btn-outline-success" href="#">Sync</a>
+    <a class="btn btn-outline-success" href="#">Export</a>
   </div>
 </div>
 
@@ -14,8 +14,7 @@
       <th>Client</th>
       <th>Claim amount</th>
       <th>Created at</th>
-      <th></th>
-      <th></th>
+      <th>Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,8 +25,7 @@
         <td><%= claim.client_full_name %></td>
         <td><%= claim.claim_amount %></td>
         <td><%= claim.created_at %></td>
-        <td> <a href="#">Approve</a> </td>
-        <td> <a href="#">Invoice</a> </td>
+        <td><%= claim.status %></td>
         <td><%= link_to 'Show', claim %></td>
         <td><%= link_to 'Edit', edit_claim_path(claim) %></td>
         <td><%= link_to 'Destroy', claim, method: :delete, data: { confirm: 'Are you sure?' } %></td>

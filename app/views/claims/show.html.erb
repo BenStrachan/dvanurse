@@ -32,43 +32,46 @@
     <strong>Billable items:</strong>
     Billable item 1, Billable item 2, Billable item 3
   </p>
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Classification</th>
-        <th>Total visits</th>
-        <th>Total hours</th>
-        <th></th>
-      </tr>
-    </thead>
+  <br>
+  <div class="col-md-8">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Classification</th>
+          <th>Total visits</th>
+          <th>Total hours</th>
+          <th></th>
+        </tr>
+      </thead>
 
-    <tbody>
-        <tr>
-          <td>CNC</td>
-          <td><%= @claim.cnc_visits %></td>
-          <td><%= @claim.cnc_hours %></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>EN</td>
-          <td><%= @claim.en_visits %></td>
-          <td><%= @claim.en_hours %></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>NSS</td>
-          <td><%= @claim.nss_visits %></td>
-          <td><%= @claim.nss_hours %></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>RN</td>
-          <td><%= @claim.rn_visits %></td>
-          <td><%= @claim.rn_hours %></td>
-          <td></td>
-        </tr>
-    </tbody>
-  </table>
+      <tbody>
+          <tr>
+            <td>CNC</td>
+            <td><%= @claim.cnc_visits %></td>
+            <td><%= @claim.cnc_hours %></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>EN</td>
+            <td><%= @claim.en_visits %></td>
+            <td><%= @claim.en_hours %></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>NSS</td>
+            <td><%= @claim.nss_visits %></td>
+            <td><%= @claim.nss_hours %></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>RN</td>
+            <td><%= @claim.rn_visits %></td>
+            <td><%= @claim.rn_hours %></td>
+            <td></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <br>

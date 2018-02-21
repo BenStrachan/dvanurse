@@ -1,4 +1,13 @@
-<h4>Claim Data</h4>
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-6">
+    <h1>Claim data</h1>
+  </div>
+  <div class="col-md-6 col-sm-6 col-6 text-right">
+      <a class="btn btn-outline-primary" href="<%= edit_claim_datum_path(@claim_datum) %>">Edit</a>
+  </div>
+</div>
+<hr>
+
 <p>
   <strong>Provider full name:</strong>
   <%= @claim_datum.provider_full_name %>
