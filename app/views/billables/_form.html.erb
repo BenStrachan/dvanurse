@@ -2,6 +2,7 @@
 
   <div class="form-inputs">
     <%= f.input :item_number %>
+    <%= f.input :category,:collection => ['Clinical', 'Personal', 'Other']  %>
     <%= f.input :visit_type %>
     <%= f.input :min_visit %>
     <%= f.input :max_visit %>

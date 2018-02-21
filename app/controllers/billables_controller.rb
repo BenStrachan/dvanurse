@@ -69,6 +69,6 @@ class BillablesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def billable_params
-      params.require(:billable).permit(:item_number, :visit_type, :min_visit, :max_visit, :core_fee)
+      params.require(:billable).permit(:item_number, :visit_type, :min_visit, :max_visit, :core_fee, :category)
     end
 end
