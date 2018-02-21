@@ -69,6 +69,6 @@ class ClaimDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def claim_datum_params
-      params.require(:claim_datum).permit(:provider_full_name, :provider_id, :date_of_service, :client_full_name, :service)
+      params.require(:claim_datum).permit(:provider_full_name, :provider_id, :date_of_service, :client_full_name, :service, :duration)
     end
 end

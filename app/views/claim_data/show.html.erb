@@ -14,13 +14,28 @@
 </p>
 
 <p>
-  <strong>Provider:</strong>
+  <strong>Provider number:</strong>
   <%= @claim_datum.provider_id %>
 </p>
 
 <p>
   <strong>Date of service:</strong>
   <%= @claim_datum.date_of_service %>
+</p>
+
+<p>
+  <strong>Client full name:</strong>
+  <%= @claim_datum.client_full_name %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @claim_datum.duration %>
+</p>
+
+<p>
+  <strong>Services:</strong>
+  <%= @claim_datum.service %>
 </p>
 
 <%= link_to 'Edit', edit_claim_datum_path(@claim_datum) %> |
